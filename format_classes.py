@@ -28,6 +28,8 @@
 ## similarly to cells, as they overwrite each other right now
 ## and don't maintain a memory of old row/column formats.
 ## There are some terrible names, like override_cell_format.
+## Book.add_book_sheet() in particular is bad. It's mainly
+## copy/pasted from xlsxwriter, so an update there could break it.
 ## These functions need tests. I'm sure there are errors that
 ## my limited use-cases haven't seen.
 
