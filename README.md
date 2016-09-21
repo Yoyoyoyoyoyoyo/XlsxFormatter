@@ -30,3 +30,6 @@ Formatting cells with Xlsxwriter can be a pain. Updating a cell's format means
 
 	Fifth, I threw in a function to make boxes. It gives you formatting
 		control over border styles & colors, as well as cell patterns & colors.
+
+To use, import Book() and use that instead of the normal Workbook(). 
+And instead of adding sheets via book.add_worksheet(), use book.add_book_sheet().
