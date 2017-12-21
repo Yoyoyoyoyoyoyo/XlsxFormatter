@@ -113,7 +113,6 @@ class Book(Workbook):
 			created instead of the default type, so I'm largely copying
 			the code from xlsxwriter.workbook._add_sheet()"""
 		sheet_index = len(self.worksheets_objs)
-		# name = self._check_sheetname(name, False)
 
 		# Initialization data to pass to the worksheet.
 		init_data = {
@@ -121,7 +120,6 @@ class Book(Workbook):
 			'index': sheet_index,
 			'str_table': self.str_table,
 			'worksheet_meta': self.worksheet_meta,
-			'optimization': self.optimization,
 			'tmpdir': self.tmpdir,
 			'date_1904': self.date_1904,
 			'strings_to_numbers': self.strings_to_numbers,
@@ -131,6 +129,8 @@ class Book(Workbook):
 			'default_date_format': self.default_date_format,
 			'default_url_format': self.default_url_format,
 			'excel2003_style': self.excel2003_style,
+			'constant_memory': 0,
+			'remove_timezone': False
 		}
 
 		worksheet = Sheet()
